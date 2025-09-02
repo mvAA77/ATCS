@@ -14,13 +14,20 @@ public class Main {
             newStack.push(value);
             //System.out.println(newStack.peek());
         }
-
-        //System.out.println(newStack.size());
-        //System.out.println(newStack.isEmpty());
-        //System.out.println(newStack.peek());
-        //System.out.println(newStack.pop());
         System.out.println(newStack.isEmpty());
-        System.out.println(newStack.peek());
+        newStack.peek();
+        newStack.pop();
+        System.out.println(newStack.isEmpty());
+        for (int s = 0; s < 18; s++) {
+            newStack.pop();
+
+        }
+        System.out.println(newStack.isEmpty());
+        newStack.pop();
+        newStack.peek();
+        System.out.println(newStack.isEmpty());
+        
+
 
     }
 }
