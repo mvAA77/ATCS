@@ -58,6 +58,7 @@ public class Stack {
             return -1;
         }
     }
+    
     public int size() {
         return count;
     }
