@@ -58,11 +58,13 @@ public class Stack {
             return -1;
         }
     }
-    
+
     public int size() {
         return count;
     }
     public boolean isEmpty() {
+
+
         for (int i = 0; i < len; i++) {
             if (!(stack[i] == 0)) {
                 return false;
@@ -72,4 +74,9 @@ public class Stack {
         return true;
     }
 
+    /* if (count == 0) {
+     * return true;
+     * } else {
+     * return false;}
+    } */
 }
