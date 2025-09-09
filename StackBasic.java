@@ -1,18 +1,17 @@
 import java.util.Arrays;
 
-public class Stack <T> {
-
-    private T[] stack;
+public class StackBasic {
+    private int[] stack;
     private int len;
     private int count;
 
-    public Stack(int size) {
-        stack  = (T[]) new Object[size];
+    public StackBasic(int size) {
+        stack  = new int[size];
         len = size;
         count = 0;
     }
 
-    public Stack(T[] stack) {
+    public StackBasic(int[] stack) {
         this.stack  = stack;
         len = stack.length;
         count = len;
@@ -23,57 +22,61 @@ public class Stack <T> {
         stack = Arrays.copyOf(stack, len);
     }
 
-    public void push(T t) {
+    public void push(int e) {
         int prevLen = len;
         if (count >= len) {
             grow();
-            stack[prevLen] = t;
+            stack[prevLen] = e;
             //System.out.println(stack[prevLen]);
             count++;
         } else {
-            stack[count] = t;
+            stack[count] = e;
             //System.out.println(stack[count]);
             count++;
         }
     }
 
-    public T peek() {
+    public int peek() {
         try {
             System.out.println(stack[count-1]);
             return stack[count-1];
         } catch (Exception e) {
             System.out.println("Failed. Empty Stack Error");
-            return null;
+            return -1;
         }
     }
 
-    public T pop() {
+    public int pop() {
         try{
-            T value = stack[count-1];
-            stack[count-1] = null;
+            int value = stack[count-1];
+            stack[count-1] = 0;
             count = count - 1;
             System.out.println(value);
             return value;
         } catch (Exception e) {
             System.out.println("Sorry! There has been an error");
-            return null;
+            return -1;
         }
     }
 
     public int size() {
         return count;
     }
-
     public boolean isEmpty() {
 
-        if (count == 0) {
-            return true;
-        } else {
-            return false;}
 
+        for (int i = 0; i < len; i++) {
+            if (!(stack[i] == 0)) {
+                return false;
+            }
+        }
+
+        return true;
     }
 
-    public static void main(String[] args) {
-        
-    }
+    /* if (count == 0) {
+     * return true;
+     * } else {
+     * return false;}
+    } */
 }

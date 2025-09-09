@@ -3,7 +3,7 @@ import java.util.Random;
 public class Main {
     public static void main(String[] args) {
         
-        Stack newStack = new Stack(10);
+        StackBasic newStack = new StackBasic(10);
 
         // Reports correctly even with array full of default values
         System.out.println(newStack.isEmpty());
