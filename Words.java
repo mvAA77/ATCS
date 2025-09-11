@@ -27,7 +27,19 @@ public class Words {
     }
 
     public Stack getWord() {
-        return word;
+        String thisWord = "";
+        for (int i = 0, i < word.size(); i++) {
+            thisWord += word.pop();
+        }
+
+        for (int i = thisWord.length()-1; i >=0; i--) {
+            word.push(thisWord.charAt(i));
+        }
+        String officialWord = "";
+         for (int i = thisWord.length() - 1; i >= 0; i--) {
+            officialWord += thisWord.charAt(i);
+        }
+        return officialWord;
 
     }
 
