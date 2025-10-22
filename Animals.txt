@@ -1,0 +1,91 @@
+Panther (Sofie) 
+1
+45
+
+Bunny (Mischa)
+7
+120
+
+Rat (Theeksha)
+20
+15
+
+Jellyfish (Rani)
+50
+5
+
+Tiger (Sailendra)
+5
+120
+
+Octopus (Jaylen)
+5
+60
+
+Guinea Pig (Davud)
+3
+45
+
+Owl (Richard)
+2
+60
+
+Dog (Lucas)
+20
+60
+
+Penguin (Meilun)
+2
+120
+
+Chicken (Ashna)
+2
+50
+
+Otter (Tofu)
+20
+60
+
+Monkey (Noah)
+30
+60
+
+Seal (Nikil)
+9
+67
+
+Polar Bear (Nafisa)
+1
+240
+
+Ferret (Adithi)
+10
+30
+
+Hawk (Josh)
+5
+20
+
+Sheep (Showrov)
+3
+60
+
+Plankton (Sathvik)
+1
+100
+
+Squirrel (Grace)
+3
+20
+
+Pangolin (Tanya)
+8
+140
+
+Pigeon (Alex)
+5
+30
+
+Call duck (Andy)
+2
+45

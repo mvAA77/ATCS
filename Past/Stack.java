@@ -1,17 +1,19 @@
+package past;
 import java.util.Arrays;
 
-public class StackBasic {
-    private int[] stack;
+public class Stack <T> {
+
+    private T[] stack;
     private int len;
     private int count;
 
-    public StackBasic(int size) {
-        stack  = new int[size];
+    public Stack(int size) {
+        stack  = (T[]) new Object[size];
         len = size;
         count = 0;
     }
 
-    public StackBasic(int[] stack) {
+    public Stack(T[] stack) {
         this.stack  = stack;
         len = stack.length;
         count = len;
@@ -22,61 +24,57 @@ public class StackBasic {
         stack = Arrays.copyOf(stack, len);
     }
 
-    public void push(int e) {
+    public void push(T t) {
         int prevLen = len;
         if (count >= len) {
             grow();
-            stack[prevLen] = e;
+            stack[prevLen] = t;
             //System.out.println(stack[prevLen]);
             count++;
         } else {
-            stack[count] = e;
+            stack[count] = t;
             //System.out.println(stack[count]);
             count++;
         }
     }
 
-    public int peek() {
+    public T peek() {
         try {
             System.out.println(stack[count-1]);
             return stack[count-1];
         } catch (Exception e) {
             System.out.println("Failed. Empty Stack Error");
-            return -1;
+            return null;
         }
     }
 
-    public int pop() {
+    public T pop() {
         try{
-            int value = stack[count-1];
-            stack[count-1] = 0;
+            T value = stack[count-1];
+            stack[count-1] = null;
             count = count - 1;
             System.out.println(value);
             return value;
         } catch (Exception e) {
             System.out.println("Sorry! There has been an error");
-            return -1;
+            return null;
         }
     }
 
     public int size() {
         return count;
     }
+
     public boolean isEmpty() {
 
+        if (count == 0) {
+            return true;
+        } else {
+            return false;}
 
-        for (int i = 0; i < len; i++) {
-            if (!(stack[i] == 0)) {
-                return false;
-            }
-        }
-
-        return true;
     }
 
-    /* if (count == 0) {
-     * return true;
-     * } else {
-     * return false;}
-    } */
+    public static void main(String[] args) {
+        
+    }
 }
