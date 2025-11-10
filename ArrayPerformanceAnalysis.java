@@ -91,10 +91,5 @@ public class ArrayPerformanceAnalysis {
                             size, bubbleSortTimes[i], quickSortTimes[i]);
         }
         
-        System.out.println("\n--- Copy below this line for Google Sheets ---");
-        System.out.println("Array Size,Bubble Sort (ns),Quick Sort (ns)");
-        for (int i = 0; i < sizes.length; i++) {
-            System.out.printf("%,d,%,d,%,d\n", sizes[i], bubbleSortTimes[i], quickSortTimes[i]);
-        }
     }
 }
