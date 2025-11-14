@@ -1,22 +1,24 @@
 from linkedlist import LinkedList
 
 class Queue:
-    
-    queuee = LinkedList()
-    
-    
+    def __init__(self):
+        self.queue = LinkedList()
+
     def offer(self, elem):
-        queuee.add(self.elem);
-    
-    def poll():
-        return queuee.remove(0)
-    
-    
-    def peek():
-        return queuee.get(0)
-    
-    def isEmpty():
-        return queuee.isEmpty()
-    
-    def size():
-        return queuee.size()
+        self.queue.add(elem)
+
+    def poll(self):
+        if self.queue.isEmpty():
+            return None
+        return self.queue.remove(0)
+
+    def peek(self):
+        if self.queue.isEmpty():
+            return None
+        return self.queue.get(0)
+
+    def isEmpty(self):
+        return self.queue.isEmpty()
+
+    def size(self):
+        return self.queue.size()
