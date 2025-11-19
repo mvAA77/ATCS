@@ -20,7 +20,6 @@ class LinkedList:
         if index < 0 or index >= self.count:
             raise IndexError("Index out of bounds")
 
-        # Removing first element
         if index == 0:
             removedValue = self.header.getValue()
             self.header = self.header.nextNode
